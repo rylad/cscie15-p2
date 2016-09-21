@@ -3,26 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>CSCIE15 Project 2</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">	
   </head>
   <body>
-  
-  You chose <?php echo $_GET["words"]; ?> using the <?php echo $_GET["dictionary"]; ?> dictionary.<br>
-  
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  <?php require('logic.php');?>
+   
   <h1> Here is your password </h1>
+  <?php print_r($password); ?> <br><br><br><br>
   
-  <?php 
-  error_reporting(E_ALL); 
-
-  $words=$_GET["words"];
-  $dictionary=$_GET["dictionary"];
- 
-  $array=(file($dictionary));
-  $count=count($array);
-  $i=$words;
-  for ($x=0; $x<=$i; $x++){
-	  $random = rand(0,$count);
-	  echo $array[$random];
-  }
-  ?>
+  
+  <h2>Notes</h2>
+  You chose to use <?php echo $words; ?>.<br>
+  You chose the <?php echo $dictionary; ?> dictionary.<br>
+  
+  <img src = "images/<?php echo $dictionary;?>.jpg" style="width:500px;height:500px">
   </body>
 </html>
