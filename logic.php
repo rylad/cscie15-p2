@@ -23,6 +23,7 @@
 	}
 	
 	shuffle($passwordArray);
+	$passwordArray = array_map('trim',$passwordArray);
 	
 	if ($seperation == "comma"){
 		$password = implode(",", $passwordArray);
@@ -38,5 +39,7 @@
 		echo "Something broke...";
     }
 	
-	$password=str_replace(' ','',$password);
+	$password=str_replace('\r','',$password); 
+    $password=str_replace(' ','',$password);
+	
 	

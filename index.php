@@ -10,9 +10,11 @@
   <body>
 
 <!-- Generic Navigation include -->
+
 <?php require('navigation.html')?>
 	
 <!-- Creating the form to get user input -->
+
 
  <form action="generated_password.php" method="get">
   <h3>How many words should your password contain?</h3> 
@@ -58,6 +60,7 @@
   <hr>
   <input type="submit">
   </form>
-
+  <br>
+  **Disclaimer - Elvish and Klingon use very strange characters in general and are NOT considered as part of the symbol count.
   </body>
 </html>
