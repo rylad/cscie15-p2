@@ -7,7 +7,13 @@
   <body>
   
   <form action="generated_password.php" method="get">
-  How many words should your password contain? <input type="text" name="words"<br>
+  How many words should your password contain? <input type="text" name="words"><br>
+ 
+  Which Dictionary would you like to use?<br>
+  <input type="radio" name="dictionary" value="topEnglish" checked> Top English Words<br>
+  <input type="radio" name="dictionary" value="Elvish"> Elvish<br>
+  <input type="radio" name="dictionary" value="Klingon"> Klingon<br>
+
   <input type="submit">
   </form>
 

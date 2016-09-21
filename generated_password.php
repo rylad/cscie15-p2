@@ -6,7 +6,7 @@
   </head>
   <body>
   
-  You chose <?php echo $_GET["words"]; ?><br>
+  You chose <?php echo $_GET["words"]; ?> using the <?php echo $_GET["dictionary"]; ?> dictionary.<br>
   
   <h1> Here is your password </h1>
   
@@ -14,7 +14,9 @@
   error_reporting(E_ALL); 
 
   $words=$_GET["words"];
-  $array=(file("wordlist.txt"));
+  $dictionary=$_GET["dictionary"];
+ 
+  $array=(file($dictionary));
   $count=count($array);
   $i=$words;
   for ($x=0; $x<=$i; $x++){

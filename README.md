@@ -13,3 +13,5 @@ INSERT DEMO LINK HERE
 
 ##WordList Credits
 English Wordlist: https://github.com/first20hours/google-10000-english/blob/master/google-10000-english-usa.txt
+Elvish: http://www.candlekeep.com/library/articles/diction_elf.htm (Cleanup by me)
+Klingon: http://klingonska.org/dict/dict.zdb (Cleanup by me)
