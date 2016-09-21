@@ -3,24 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>CSCIE15 Project 2</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">	
-  </head>
+    <?php require('includeHeader.html') ?>  </head>
   <body>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  <?php require('logic.php');?>
-   
+<!-- Generic Navigation include -->
+<?php require('navigation.html')?>
+<?php require('logic.php');?>
+
   <h1> Here is your password </h1>
-  <?php print_r($password); ?> <br><br><br><br>
+  <?php print_r($password);?> <br><br><br><br>
   
   
-  <h2>Notes</h2>
-  You chose to use <?php echo $words; ?>.<br>
-  You chose the <?php echo $dictionary; ?> dictionary.<br>
+  <h2>Selection Notes</h2>
+  You chose to use <?php echo $words; ?> words.<br>
+  You chose the <?php echo $dictionary; ?> dictionary.<br><br><br><br>
   
+  
+  <h3>Here is a picture relevant to your dictionary.</h3>
+  <hr>
   <img src = "images/<?php echo $dictionary;?>.jpg" style="width:500px;height:500px">
   </body>
 </html>

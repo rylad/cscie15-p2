@@ -3,15 +3,27 @@
 	$words=$_GET["words"];
 	$dictionary=$_GET["dictionary"];
 	$seperation=$_GET["seperation"];
-
+	$symbols=$_GET["symbols"];
+	$symbolType=$_GET["symbolType"];
+	
 	$array=(file($dictionary));
 	$count=count($array);
+	$countSymbols=count($symbolType);
 	$i=$words;
+	
 	for ($x=0; $x<=$i; $x++){
-		$random = rand(0,$count);
-		$passwordArray[] = $array[$random];
+		$randomWord = rand(0,$count);
+		$passwordArray[] = $array[$randomWord];
 	}
 
+	
+	for ($x=0; $x<=$symbols; $x++){
+		$randomSymbol = rand(0,$countSymbols);
+		$passwordArray[] = $symbolType[$randomSymbol];
+	}
+	
+	shuffle($passwordArray);
+	
 	if ($seperation == "comma"){
 		$password = implode(",", $passwordArray);
 	}elseif ($seperation == "dash"){
@@ -27,3 +39,4 @@
     }
 	
 	$password=str_replace(' ','',$password);
+	

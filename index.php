@@ -15,7 +15,8 @@
 <!-- Creating the form to get user input -->
 
  <form action="generated_password.php" method="get">
-  <h3>How many words should your password contain?</h3> <input type="text" name="words" style="width: 10%"><br>
+  <h3>How many words should your password contain?</h3> 
+  <input type="text" name="words" style="width: 10%" value="5"><br>
  <br>
   <h3>Which Dictionary would you like to use?</h3><br>
   <input type="radio" name="dictionary" value="topEnglish" checked> Top English Words<br>
@@ -23,11 +24,12 @@
   <input type="radio" name="dictionary" value="Klingon"> Klingon<br>
   <br>
   <h3>How would you like your words seperated?</h3><br>
-  <input type="radio" name="seperation" value="comma" checked> Comma (,)<br>
+  <input type="radio" name="seperation" value="none" checked> No Seperation<br>
+  <input type="radio" name="seperation" value="comma"> Comma (,)<br>
   <input type="radio" name="seperation" value="dash"> Dash (-)<br>
   <input type="radio" name="seperation" value="pipe"> Pipe (|)<br>
   <input type="radio" name="seperation" value="space"> Space ( )<br>
-  <input type="radio" name="seperation" value="none"> No Seperation<br>
+
   <br>
   <h3>How many symbols would you like in your password?</h3>
   Note: Highly recommend no seperation for this one <br>
@@ -44,6 +46,15 @@
 	<option value="9">9</option>
 	<option value="10">10</option>
   </select> 
+  
+  <h3> If you would like symbols, which symbols should we include?</h3>
+  <input type="checkbox" name="symbolType[]" value="?" checked> ? <br>
+  <input type="checkbox" name="symbolType[]" value="!" checked> ! <br>
+  <input type="checkbox" name="symbolType[]" value="@" checked> @ <br>
+  <input type="checkbox" name="symbolType[]" value="#" checked> # <br>
+  <input type="checkbox" name="symbolType[]" value="$" checked> $ <br>
+  <input type="checkbox" name="symbolType[]" value="%" checked> % <br>
+  <input type="checkbox" name="symbolType[]" value="&" checked> & <br>  
   <hr>
   <input type="submit">
   </form>
